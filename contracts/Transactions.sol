@@ -60,7 +60,6 @@ contract Transactions {
                 keyword
             );
         }
-        
     }
 
     function getAllTransactions()
@@ -70,6 +69,50 @@ contract Transactions {
     {
         return transactions;
     }
+
+    // function getAllMySentTransactions()
+    //     public
+    //     view
+    //     returns (TransferStruct[] memory)
+    // {
+    //     uint count = 0;
+    //     for (uint256 i = 0; i < transactions.length; i++) {
+    //         if (transactions[i].sender == msg.sender) {
+    //             count++;
+    //         }
+    //     }
+    //     TransferStruct[] memory tempList = new TransferStruct[](count);
+
+    //     for (uint256 index = 0; index < transactions.length; index++) {
+    //         if (transactions[index].sender == msg.sender) {
+    //             tempList[count - 1] = transactions[index];
+    //             count--;
+    //         }
+    //     }
+    //     return tempList;
+    // }
+
+    // function getAllMyReceivedTransactions()
+    //     public
+    //     view
+    //     returns (TransferStruct[] memory)
+    // {
+    //     uint count = 0;
+    //     for (uint256 i = 0; i < transactions.length; i++) {
+    //         if (transactions[i].receiver == msg.sender) {
+    //             count++;
+    //         }
+    //     }
+
+    //     TransferStruct[] memory tempList = new TransferStruct[](count);
+    //     for (uint256 index = 0; index < transactions.length; index++) {
+    //         if (transactions[index].receiver == msg.sender) {
+    //             tempList[count - 1] = transactions[index];
+    //             count--;
+    //         }
+    //     }
+    //     return tempList;
+    // }
 
     function getTransactionCount() public view returns (uint256) {
         return transactionCount;
